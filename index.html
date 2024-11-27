@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script src="https://kit.fontawesome.com/a14ae32021.js" crossorigin="anonymous"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>This one is for my Sannu</title>
+
+<style type="text/css">
+@font-face {
+	font-family: digit;
+	src: url('digital-7_mono.ttf') format("truetype");
+}
+</style>
+<link href="css/default.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+
+</head>
+
+<body>
+
+<div id="mainDiv">
+	<div id="content">
+		<div id="code">
+			<span class="comments">/*सन्नो कविता मेरो सन्नु को लागी*</span><br />
+			<span class="space"><span class="comments">*/</span><br />
+			तिमी बिना मेरो संसार अधुरो छ,<br/>
+			तिमीले हाँस्दा मेरा सपनाहरू पुरा हुन्छ।<br/>
+			तिमी नै मेरो जीवनको मिठो गीत हौ,<br/>
+			तिमी संग बिताएका पलहरू स्वर्ण जस्तै छन्।<br/>
+			<span class="comments">// </span><br />
+			तिमीको आँखामा अद्धितीय शान्ति छ,<br/>
+			तिमीको मुस्कानले दिलमा नयाँ आशा पलाउँछ।<br/>
+			तिमी मेरो छायाँ, मेरो प्रकाश हौ,<br/>
+			तिमी संगै म संसार जित्न चाहन्छु।<br/>
+			<span class="comments">// </span><br />
+			जब तिमी नजिक हुन्छौ, समय पनि थमिन्छ,<br/>
+			तिमी मेरो हृदयको अनमोल रत्न हौ।<br/>
+			माया यत्रा तिमी सँगै सधैं,<br/>
+			तिमी बिना, मेरो मन कहिल्यै शान्त हुँदैन।<br/>
+
+			<span class="comments">// </span><br />
+			म तिमीलाई कहिल्यै छोड्ने छैन मेरो माया,<br/>
+			 म तिमीलाई छोड्ने छैन<br />
+			<span class="comments">// </span><br />
+			
+			यदि मलाई माया गर्नुहुन्छ भने<br />
+			<span class="comments">// </span><br />
+	
+			प्रेमको चिन्हलाई खुसी पार्न सक्छ<br />
+			<span class="comments">// </span><br />
+			
+			<span id="heartspan">
+			<a href="flat-design-couple-giving-their-heart-love_990404-8232.jpg"><i class="fas fa-heart" id="icon"></i></a>
+			</span>
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					माया जिन्दगी बारी को लागी
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					I LOVE YOU SO MUCH<br/>
+					<div class="signature">- SANNU SUMIRAN</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	var offsetX = $("#loveHeart").width() / 2;
+	var offsetY = $("#loveHeart").height() / 2 - 55;
+	var together = new Date();
+	together.setFullYear(2023, 4, 10); // May 10, 2023 (Months are 0-indexed, so May is 4)
+	together.setHours(0);
+	together.setMinutes(0);
+	together.setSeconds(0);
+	together.setMilliseconds(0);
+	
+	if (!document.createElement('canvas').getContext) {
+		var msg = document.createElement("div");
+		msg.id = "errorMsg";
+		msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+		document.body.appendChild(msg);
+		$("#code").css("display", "none");
+		$("#copyright").css("position", "absolute");
+		$("#copyright").css("bottom", "10px");
+		document.execCommand("stop");
+	} else {
+		setTimeout(function () {
+			startHeartAnimation();
+		}, 5000);
+	
+		timeElapse(together);
+		setInterval(function () {
+			timeElapse(together);
+		}, 500);
+	
+		adjustCodePosition();
+		$("#code").typewriter();
+	}
+	</script>
+	
+</body>
+</html>
